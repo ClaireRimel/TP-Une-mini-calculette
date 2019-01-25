@@ -1,4 +1,3 @@
-// Fonction permettant de demander à l'utilisateur d'entrer un nombre et de le convertir en entier
 func input() -> Int {
     let strData = readLine();
     
@@ -20,7 +19,7 @@ repeat {
         + "\n"
         + "\n Que voulez-vous ? (de 1 à 5)")
     opperateur = input()
-
+    
     
     if (opperateur > 0 && opperateur < 6) {
         print("Entrez le premier nombre : ")
@@ -48,5 +47,6 @@ repeat {
         print("Le resultat est de \(result)")
         print("")
     }
-
+    
 } while opperateur < 1 || opperateur > 5
+
