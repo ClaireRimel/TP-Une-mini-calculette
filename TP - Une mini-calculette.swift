@@ -21,39 +21,44 @@ func actionChoice(){
                 + "\n3. Multiplication"
                 + "\n4. Division"
                 + "\n5. Modulo"
+                + "\n6: Carré"
                 + "\n"
-                + "\n Que voulez-vous ? (de 1 à 5)")
+                + "\n Que voulez-vous ? (de 1 à 6)")
             
             opperateur = input()
             
-            if (opperateur > 0 && opperateur < 6){
+            if (opperateur > 0 && opperateur < 7){
                 print("Entrez le premier nombre : ")
                 numero1 = input()
-                
-                print("Entrez le deuxième nombre : ")
-                numero2 = input()
-                
+                if opperateur == 6 {
+                    numero2 = numero1
+                } else {
+                    print("Entrez le deuxième nombre : ")
+                    numero2 = input()
+                }
                 switch opperateur{
                 case 1:
                     result = numero1 + numero2
                 case 2:
                     result = numero1 - numero2
                 case 3:
-                    result = numero1 + numero2
+                    result = numero1 * numero2
                 case 4:
                     result = numero1 / numero2
                 case 5:
                     result = numero1 % numero2
+                case 6:
+                    result = numero1 * numero2
                 default:
                     result = 0
-                    print("Faites votre choix entre 1 à 5")
+                    print("Faites votre choix entre 1 à 6")
                 }
                 print("\n"
                     + "\n Le resultat est de \(result)"
                     + "\n")
             }
             
-        } while opperateur < 1 || opperateur > 5
+        } while opperateur < 1 || opperateur > 6
         
     } while autreCalcule()
     
@@ -71,7 +76,7 @@ func autreCalcule() -> Bool {
         print("Vous avez réalisé \(calculeRealise) calculs")
     }
     
-    print("\n Souhaitez-vous réaliser un autre calcul?"
+    print("\nSouhaitez-vous réaliser un autre calcul?"
         + "\n1. Oui"
         + "\n2: Non")
     
