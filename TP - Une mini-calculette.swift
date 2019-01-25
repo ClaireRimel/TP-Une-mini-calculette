@@ -63,7 +63,15 @@ func autreCalcule() -> Bool {
     
     var autreCalculeQuest: Int
     
-    print("\n Souhaitez-vous réaliser un autre calcule ?"
+    calculeRealise += 1
+    
+    if calculeRealise == 1 {
+        print("Vous avez réalisé \(calculeRealise) calcul")
+    } else if calculeRealise > 1 {
+        print("Vous avez réalisé \(calculeRealise) calculs")
+    }
+    
+    print("\n Souhaitez-vous réaliser un autre calcul?"
         + "\n1. Oui"
         + "\n2: Non")
     
@@ -75,5 +83,8 @@ func autreCalcule() -> Bool {
         return false
     }
 }
+
+
+var calculeRealise = 0
 
 actionChoice()
